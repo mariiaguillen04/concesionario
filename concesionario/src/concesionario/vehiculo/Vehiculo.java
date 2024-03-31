@@ -1,6 +1,6 @@
 package concesionario.vehiculo;
 
-public class Vehiculo {
+public abstract class Vehiculo {
 
 	//Atributos
 	private Marca marca;
@@ -9,7 +9,7 @@ public class Vehiculo {
 	
 	//Copnstructores
 	public Vehiculo(String marca, String modelo, String matricula ) {
-		this.marca = Marca.valueOf(marca);
+		setMarca(Marca marca);
 		this.modelo = modelo;
 		this.matricula = matricula;
 		
@@ -21,7 +21,7 @@ public class Vehiculo {
 	}
 
 	public void setMarca(Marca marca) {
-		this.marca = marca;
+		this.marca = Marca.valueOf(marca).toString();
 	}
 
 	public String getModelo() {
@@ -40,6 +40,8 @@ public class Vehiculo {
 		this.matricula = matricula;
 	}
 	
-	
+	//Métodos 
+
+	public abstract void acelerar();
 	
 }

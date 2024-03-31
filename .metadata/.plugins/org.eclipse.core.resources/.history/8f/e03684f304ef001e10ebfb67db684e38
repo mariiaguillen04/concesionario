@@ -1,0 +1,8 @@
+package concesionario.vehiculo.furgoneta;
+
+
+
+public class Furgoneta {
+	//Atributos
+		private TipoFurgoneta tipoFurgoneta;
+}

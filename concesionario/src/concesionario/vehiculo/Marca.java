@@ -1,5 +1,5 @@
 package concesionario.vehiculo;
 
 public enum Marca {
-	MERCEDES, RENAULT, FIAT, PEUGOT, NISSAN, CITROËN, BMW, SKODA
+	MERCEDES, RENAULT, FIAT, PEUGOT
 }
