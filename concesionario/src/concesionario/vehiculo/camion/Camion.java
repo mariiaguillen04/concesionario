@@ -17,6 +17,12 @@ class Camion extends Vehiculo {
 		public void setCapacidadCarga(int capacidadCarga) {
 			this.capacidadCarga = capacidadCarga;
 		}
+
+		@Override
+		public void acelerar() {
+			// TODO Auto-generated method stub
+			
+		}
 	    
 	    
 	    
