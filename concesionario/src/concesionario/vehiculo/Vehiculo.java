@@ -1,5 +1,6 @@
 package concesionario.vehiculo;
 
+
 public abstract class Vehiculo {
 
 	//Atributos
@@ -41,6 +42,18 @@ public abstract class Vehiculo {
 	}
 	
 	//Métodos 
+	
+
+	public boolean equals(Object obj) {
+		Vehiculo otro = (Vehiculo) obj;
+		boolean result = false;
+		
+		if(this.matricula.equals(otro.matricula)) {
+			result = true;
+		}
+		
+		return result;
+	}
 
 	public abstract void acelerar();
 	
