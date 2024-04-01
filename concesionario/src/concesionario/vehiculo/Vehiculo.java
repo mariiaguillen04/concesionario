@@ -3,27 +3,27 @@ package concesionario.vehiculo;
 public abstract class Vehiculo {
 
 	//Atributos
-	private Marca marca;
+	private String marca;
 	private String modelo;
 	private String matricula;
 	
 	//Copnstructores
 	public Vehiculo(String marca, String modelo, String matricula ) {
-		setMarca(Marca marca);
+		this.marca = marca;
 		this.modelo = modelo;
 		this.matricula = matricula;
 		
 	}
 
 	//Get y set
-	public Marca getMarca() {
+	public String getMarca() {
 		return this.marca;
 	}
 
-	public void setMarca(Marca marca) {
-		this.marca = Marca.valueOf(marca).toString();
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
-
+	
 	public String getModelo() {
 		return this.modelo;
 	}
@@ -43,5 +43,7 @@ public abstract class Vehiculo {
 	//Métodos 
 
 	public abstract void acelerar();
+	
+	// Equals y toString
 	
 }
