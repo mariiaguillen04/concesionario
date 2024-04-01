@@ -1,5 +1,5 @@
 package concesionario.vehiculo.coche;
 
-public class Combustible {
-
+public enum Combustible {
+DIESEL, GASOLINA
 }

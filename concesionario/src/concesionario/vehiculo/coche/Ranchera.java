@@ -1,15 +1,14 @@
 package concesionario.vehiculo.coche;
 
-
 public class Ranchera extends Coche {
 
 	// Atributos
     private double capacidadMaletero;
 
  // Constructor
-    public Ranchera(Combustible combustible, double capacidadMaletero) {
-        super(combustible);
-        this.setCapacidadMaletero(capacidadMaletero);
+    public Ranchera(String marca, String modelo, String matricula, Combustible combustible, double capacidadMaletero) {
+        super(marca, modelo, matricula, combustible);
+        this.capacidadMaletero = capacidadMaletero;
     }
 
 	public double getCapacidadMaletero() {
@@ -19,4 +18,13 @@ public class Ranchera extends Coche {
 	public void setCapacidadMaletero(double capacidadMaletero) {
 		this.capacidadMaletero = capacidadMaletero;
 	}
+
+	@Override
+	public void acelerar() {
+	
+		
+	}
+
+		
+
 }
