@@ -6,14 +6,14 @@ public class Quad extends Ciclomotor{
 	//Constructor
 	public Quad(String marca, String modelo, String matricula, int cilindrada, String tamano) {
 		super(marca, modelo, matricula, cilindrada);
-		setTamanoquad(tamano);
+		setTamanoQuad(tamano);
 	}
 	//Getter y Setters
-	public Tamano getTamanoquad() {
+	public Tamano getTamanoQuad() {
 		return tamanoquad;
 	}
 
-	public void setTamanoquad(String tamano2) {
+	public void setTamanoQuad(String tamano2) {
 		this.tamanoquad = Tamano.valueOf(tamano2);
 	}
 	//Metodos

@@ -7,7 +7,7 @@ public class Sedan extends Coche {
     private int puertas;
 
  // Constructor
-    public Sedan(String marca, String modelo, String matricula, Combustible combustible, int puertas) {
+    public Sedan(String marca, String modelo, String matricula, String combustible, int puertas) {
         super(marca, modelo, matricula, combustible);
 		this.puertas  = puertas;
 	}

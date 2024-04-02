@@ -8,9 +8,9 @@ public abstract class Coche extends Vehiculo{
     private Combustible combustible;
 
     // Constructor
-    public Coche(String marca, String modelo, String matricula, Combustible combustible) {
+    public Coche(String marca, String modelo, String matricula, String combustible) {
     	super(marca, modelo,matricula);
-    	this.combustible = combustible;
+    	setCombustible(combustible);
     }
 
     // Getters y setters

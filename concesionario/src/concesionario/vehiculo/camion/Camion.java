@@ -2,7 +2,7 @@ package concesionario.vehiculo.camion;
 
 import concesionario.vehiculo.Vehiculo;
 
-class Camion extends Vehiculo {
+public class Camion extends Vehiculo {
 	
 	    private int capacidadCarga;
 	    private boolean esArticulado;
