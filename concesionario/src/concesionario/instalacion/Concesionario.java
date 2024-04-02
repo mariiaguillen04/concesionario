@@ -22,7 +22,7 @@ public class Concesionario {
 	    
 	    
 	    public Vehiculo[] getVehiculos() {
-			return vehiculos;
+			return this.vehiculos;
 		}
 
 
@@ -34,7 +34,7 @@ public class Concesionario {
 
 
 		public int getNumMaxVehiculos() {
-			return numMaxVehiculos;
+			return this.numMaxVehiculos;
 		}
 
 
@@ -46,7 +46,7 @@ public class Concesionario {
 
 
 		public int getNumVehiculos() {
-			return numVehiculos;
+			return this.numVehiculos;
 		}
 
 
@@ -58,7 +58,7 @@ public class Concesionario {
 
 
 		public int getIdConcesionario() {
-			return idConcesionario;
+			return this.idConcesionario;
 		}
 
 		public void setIdConcesionario(int idConcesionario) {

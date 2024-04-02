@@ -14,7 +14,7 @@ class Camion extends Vehiculo {
 	    }
 
 		public int getCapacidadCarga() {
-			return capacidadCarga;
+			return this.capacidadCarga;
 		}
 
 		public void setCapacidadCarga(int capacidadCarga) {
@@ -23,7 +23,7 @@ class Camion extends Vehiculo {
 
 	    
 		public boolean isEsArticulado() {
-			return esArticulado;
+			return this.esArticulado;
 		}
 
 		public void setEsArticulado(boolean esArticulado) {
@@ -31,7 +31,7 @@ class Camion extends Vehiculo {
 		}
 
 		public int getPesoMercancia() {
-			return pesoMercancia;
+			return this.pesoMercancia;
 		}
 
 		public void setPesoMercancia(int pesoMercancia) {

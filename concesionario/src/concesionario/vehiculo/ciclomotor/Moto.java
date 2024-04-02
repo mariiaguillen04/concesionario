@@ -23,15 +23,7 @@ public class Moto extends Ciclomotor{
 			return "Moto [Marca=" + getMarca() + "modelo= " + getModelo() + "matricula= " +
 					getMatricula() + "cilindrada= " + getCilindrada() + "tipo= " + this.tipoMoto + "]";
 		}
-		@Override
-		public boolean equals(Object obj) {
-			Moto otro = (Moto) obj;
-			boolean result = false;
-			if(this.getMatricula().equals(otro.getMatricula())) {
-				result = true;
-			}
-			return result;
-		}
+		
 	@Override
 	public void acelerar() {
 		

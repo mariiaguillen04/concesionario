@@ -1,0 +1,70 @@
+package concesionario.vehiculo;
+
+import concesionario.vehiculo.ciclomotor.Moto;
+
+public abstract class Vehiculo {
+
+	//Atributos
+	private String marca;
+	private String modelo;
+	private String matricula;
+	
+	//Copnstructores
+	public Vehiculo(String marca, String modelo, String matricula ) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.matricula = matricula;
+		
+	}
+
+	//Get y set
+	public String getMarca() {
+		return this.marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+	
+	public String getModelo() {
+		return this.modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public String getMatricula() {
+		return this.matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+	
+	//Métodos 
+	
+
+	public boolean equals(Object obj) {
+		Vehiculo otro = (Vehiculo) obj;
+		boolean result = false;
+		
+		if(this.matricula.equals(otro.matricula)) {
+			result = true;
+		}
+		
+		return result;
+	}
+
+	public abstract void acelerar();
+	
+	// Equals y toString
+	public boolean equals1(Object obj) {
+		Vehiculo otrov = (Vehiculo) obj;
+		boolean result = false;
+		if(this.getMatricula().equals(otrov.getMatricula())) {
+			result = true;
+		}
+		return result;
+	}
+}

@@ -1,5 +1,6 @@
 package concesionario.vehiculo;
 
+import concesionario.vehiculo.ciclomotor.Moto;
 
 public abstract class Vehiculo {
 
@@ -42,8 +43,10 @@ public abstract class Vehiculo {
 	}
 	
 	//Métodos 
+	public abstract void acelerar();
 	
-
+	
+	//Equals
 	public boolean equals(Object obj) {
 		Vehiculo otro = (Vehiculo) obj;
 		boolean result = false;
@@ -55,8 +58,7 @@ public abstract class Vehiculo {
 		return result;
 	}
 
-	public abstract void acelerar();
 	
-	// Equals y toString
+
 	
 }

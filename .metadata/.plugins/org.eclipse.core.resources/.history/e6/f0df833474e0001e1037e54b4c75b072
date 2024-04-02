@@ -1,8 +1,0 @@
-package concesionario.vehiculo;
-
-public class Vehiculo {
-
-	private String marca;
-	private String modelo;
-	private String matricula;
-}
