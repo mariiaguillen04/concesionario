@@ -1,6 +1,6 @@
 package concesionario.vehiculo.furgoneta;
 
-
+import concesionario.vehiculo.Vehiculo;
 
 public class Furgoneta extends Vehiculo {
 	//Atributos
@@ -8,19 +8,27 @@ public class Furgoneta extends Vehiculo {
 	
 		
 	//Constructor
-	public Furgoneta(String marca, String modelo, String matricula, TipoFurgoneta tipoFurgoneta ) {
+	public Furgoneta(String marca, String modelo, String matricula, String tipoFurgoneta ) {
 		super(marca, modelo, matricula);
-		setTipoFurgoneta(TipoFurgoneta tipoFurgoneta);
+		setTipoFurgoneta(tipoFurgoneta);
 	}
 	
 	//Getters y Setters
-	public TipoFurgoneta  getTipoFurgoneta(){
-		return this.tipoFurgoneta; 
-	}
 	
-	public void setTipoFurgoneta(TipoFurgoneta tipoFurgoneta) {
+	public String getTipoPista() {
+		return this.tipoFurgoneta.toString();
+	}
+
+	public void setTipoFurgoneta(String tipoFurgoneta) {
+		this.tipoFurgoneta = TipoFurgoneta.valueOf(tipoFurgoneta);
+	}
+
+	@Override
+	public void acelerar() {
+		// TODO Auto-generated method stub
 		
 	}
+	
 	
 }
 
