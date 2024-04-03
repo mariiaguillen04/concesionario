@@ -66,7 +66,7 @@ public void descargarFurgoneta() {
 	public void acelerar() {
 		if(getVelocidadInicial() <= 120) {
 			setVelocidadInicial(getVelocidadInicial()  + 10);
-			System.out.printf("La furgoneta está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+			System.out.printf("La furgoneta está acelerando, su velocidad es de %d ", getVelocidadInicial(), "Km");
 		}else{
 			throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
 		}

@@ -74,11 +74,12 @@ public class Camion extends Vehiculo {
 		public void acelerar() {
 			if(getVelocidadInicial() <= 120) {
 				setVelocidadInicial(getVelocidadInicial()  + 10);
-				System.out.printf("El camión está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+				System.out.printf("La moto está acelerando, su velocidad es de %d Km", getVelocidadInicial());
 			}else{
 				throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
 			}
 			
 		}
+
 			
 	}

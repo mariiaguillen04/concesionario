@@ -30,13 +30,12 @@ public abstract class Coche extends Vehiculo{
     	if(direccion == 1) {
     		System.out.println("Está usted girando a la derecha");
     	}
-    	if(direccion == 2) {
+    	else if(direccion == 2) {
     		System.out.println("Está usted girando a la izquierda");
     	}
-    	if(direccion != 1 || direccion != 2) {
+    	else {
     		throw new IllegalArgumentException("Error. Giro en direción incorrecta.");
     	}
-    	
     }
 
     public void consumoCombustible() {
@@ -56,11 +55,11 @@ public abstract class Coche extends Vehiculo{
     	}
     }
     
-    @Override
+	@Override
 	public void acelerar() {
 		if(getVelocidadInicial() <= 120) {
 			setVelocidadInicial(getVelocidadInicial()  + 10);
-			System.out.printf("El coche está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+			System.out.printf("La moto está acelerando, su velocidad es de %d Km", getVelocidadInicial());
 		}else{
 			throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
 		}

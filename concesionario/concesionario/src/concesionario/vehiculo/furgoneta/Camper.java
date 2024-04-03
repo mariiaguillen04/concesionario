@@ -41,7 +41,7 @@ public class Camper extends Furgoneta{
 		this.color = color;
 	}
 
-	public double getTamaño() {
+	public double getTamanio() {
 		return this.tamanio;
 	}
 
@@ -54,7 +54,7 @@ public class Camper extends Furgoneta{
 	public void acelerar() {
 		if(getVelocidadInicial() <= 120) {
 			setVelocidadInicial(getVelocidadInicial()  + 10);
-			System.out.printf("La camper está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+			System.out.printf("La moto está acelerando, su velocidad es de %d Km", getVelocidadInicial());
 		}else{
 			throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
 		}
