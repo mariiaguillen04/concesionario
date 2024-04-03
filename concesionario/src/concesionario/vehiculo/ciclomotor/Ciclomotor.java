@@ -17,6 +17,10 @@ public abstract class Ciclomotor extends Vehiculo {
 	public void setCilindrada(int cilindrada) {
 		this.cilindrada = cilindrada;
 	}
+	public void mostrarInformacion() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	

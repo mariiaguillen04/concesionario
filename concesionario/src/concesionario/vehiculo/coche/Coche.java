@@ -64,4 +64,8 @@ public abstract class Coche extends Vehiculo{
 		+ "Combustible= " + this.combustible + "]";
 	}   
     
+    public void mostrarInformacion() {
+		System.out.println(this.toString());
+	}
+    
 }

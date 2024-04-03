@@ -28,6 +28,12 @@ public class Quad extends Ciclomotor{
 		return "Quad [Marca=" + getMarca() + "modelo= " + getModelo() + "matricula= "
 				+ getMatricula() + "cilindrada= " + getCilindrada() +  "tamano= " + this.tamanoquad + "]";
 	}
+	
+	@Override
+	public void mostrarInformacion() {
+		System.out.println(this.toString());
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		Quad otro = (Quad) obj;

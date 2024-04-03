@@ -28,6 +28,7 @@ public class Furgoneta extends Vehiculo {
 		
 	}
 	
+	
 	public void cargarFurgoneta() {
         boolean cargada = false;
 		if (!cargada) {
@@ -62,5 +63,15 @@ public class Furgoneta extends Vehiculo {
 			System.out.println("La furgoneta ya esta lo vastante limpia");
 		}
 	}
+	@Override
+    public String toString() {
+		return "Coche [Marca=" + getMarca() + "modelo= " + getModelo() 
+		+ "matricula= " + getMatricula() 
+		+ "Tipo de Furgoneta= " + this.tipoFurgoneta + "]";
+	} 
+	
+	 public void mostrarInformacion() {
+			System.out.println(this.toString());
+		}
 }
 

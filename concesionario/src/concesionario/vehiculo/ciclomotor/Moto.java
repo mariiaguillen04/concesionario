@@ -24,6 +24,10 @@ public class Moto extends Ciclomotor{
 					getMatricula() + "cilindrada= " + getCilindrada() + "tipo= " + this.tipoMoto + "]";
 		}
 		
+		public void mostrarInformacion() {
+			System.out.println(this.toString());
+		}
+		
 	@Override
 	public void acelerar() {
 		
