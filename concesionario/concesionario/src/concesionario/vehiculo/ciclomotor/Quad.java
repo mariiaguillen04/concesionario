@@ -2,7 +2,7 @@ package concesionario.vehiculo.ciclomotor;
 
 public class Quad extends Ciclomotor{
 	//Atributos
-	private Tamano tamanoquad;
+	private Tamano tamanoQuad;
 	//Constructor
 	public Quad(String marca, String modelo, String matricula, int cilindrada, String tamano) {
 		super(marca, modelo, matricula, cilindrada);
@@ -10,29 +10,32 @@ public class Quad extends Ciclomotor{
 	}
 	//Getter y Setters
 	public Tamano getTamanoQuad() {
-		return tamanoquad;
+		return this.tamanoQuad;
 	}
 
 	public void setTamanoQuad(String tamano2) {
-		this.tamanoquad = Tamano.valueOf(tamano2);
+		this.tamanoQuad = Tamano.valueOf(tamano2);
 	}
 	//Metodos
 	
 	@Override
 	public void acelerar() {
-		// TODO Auto-generated method stub
+		if(getVelocidadInicial() <= 120) {
+			setVelocidadInicial(getVelocidadInicial()  + 10);
+			System.out.printf("El quad está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+		}else{
+			throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
+		}
 		
-	}
-	@Override
-	public String toString() {
-		return "Quad [Marca=" + getMarca() + "modelo= " + getModelo() + "matricula= "
-				+ getMatricula() + "cilindrada= " + getCilindrada() +  "tamano= " + this.tamanoquad + "]";
 	}
 	
 	@Override
-	public void mostrarInformacion() {
-		System.out.println(this.toString());
+	public String toString() {
+		return "Quad [Marca=" + getMarca() + "modelo= " + getModelo() + "matricula= "
+				+ getMatricula() + "cilindrada= " + getCilindrada() +  "tamano= " + this.tamanoQuad + "]";
 	}
+	
+	
 	
 	@Override
 	public boolean equals(Object obj) {

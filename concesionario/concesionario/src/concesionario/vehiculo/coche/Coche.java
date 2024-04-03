@@ -6,6 +6,7 @@ public abstract class Coche extends Vehiculo{
 	
 	// Atributos
     private Combustible combustible;
+    private boolean bloqueo = false;
 
     // Constructor
     public Coche(String marca, String modelo, String matricula, String combustible) {
@@ -15,7 +16,7 @@ public abstract class Coche extends Vehiculo{
 
     // Getters y setters
     public Combustible getCombustible() {
-        return combustible;
+        return this.combustible;
     }
 
     public void setCombustible(String combustible) {
@@ -47,14 +48,24 @@ public abstract class Coche extends Vehiculo{
     	}
     }
     
-    public void bloqueoPuertas(boolean bloqueo) {
-    	if(bloqueo == true) {
+    public void bloqueoPuertas() {
+    	if(!bloqueo ) {
     		System.out.println("Puertas bloqueadas");
-    	}
-    	if(bloqueo == false) {
+    	}else {
     		System.out.println("Puertas desbloqueadas");
     	}
     }
+    
+    @Override
+	public void acelerar() {
+		if(getVelocidadInicial() <= 120) {
+			setVelocidadInicial(getVelocidadInicial()  + 10);
+			System.out.printf("El coche está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+		}else{
+			throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
+		}
+		
+	}
 
 	//toString
     @Override
@@ -64,8 +75,6 @@ public abstract class Coche extends Vehiculo{
 		+ "Combustible= " + this.combustible + "]";
 	}   
     
-    public void mostrarInformacion() {
-		System.out.println(this.toString());
-	}
+    
     
 }

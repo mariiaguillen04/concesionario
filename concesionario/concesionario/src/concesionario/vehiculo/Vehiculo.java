@@ -8,12 +8,14 @@ public abstract class Vehiculo {
 	private String marca;
 	private String modelo;
 	private String matricula;
+	private int velocidadInicial = 0;
 	
 	//Copnstructores
-	public Vehiculo(String marca, String modelo, String matricula ) {
+	public Vehiculo(String marca, String modelo, String matricula) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.matricula = matricula;
+	
 		
 	}
 
@@ -40,7 +42,17 @@ public abstract class Vehiculo {
 
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
+		
 	}
+	
+	public int getVelocidadInicial() {
+		return this.velocidadInicial;
+	}
+
+	public void setVelocidadInicial(int velocidadInicial) {
+		this.velocidadInicial = velocidadInicial;
+	}
+
 	
 	//Métodos 
 	public abstract void acelerar();
@@ -57,6 +69,7 @@ public abstract class Vehiculo {
 		
 		return result;
 	}
+
 
 	
 

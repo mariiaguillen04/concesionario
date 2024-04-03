@@ -5,22 +5,19 @@ import concesionario.vehiculo.Vehiculo;
 public abstract class Ciclomotor extends Vehiculo {
 	//atributos
 	private int cilindrada;
-	//constructo
+	//constructor
 	public Ciclomotor(String marca, String modelo, String matricula, int cilindrada) {
 		super(marca, modelo, matricula);
 		this.cilindrada= cilindrada;
 	}
 	//Getters y Setters
 	public int getCilindrada() {
-		return cilindrada;
+		return this.cilindrada;
 	}
 	public void setCilindrada(int cilindrada) {
 		this.cilindrada = cilindrada;
 	}
-	public void mostrarInformacion() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	
 	

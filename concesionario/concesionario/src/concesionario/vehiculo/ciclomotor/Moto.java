@@ -10,7 +10,7 @@ public class Moto extends Ciclomotor{
 	}
 	//Getters y Setters
 	public Tipo getTipoMoto() {
-		return tipoMoto;
+		return this.tipoMoto;
 	}
 
 	public void setTipoMoto(String tipoMoto2) {
@@ -30,7 +30,12 @@ public class Moto extends Ciclomotor{
 		
 	@Override
 	public void acelerar() {
-		
+		if(getVelocidadInicial() <= 120) {
+			setVelocidadInicial(getVelocidadInicial()  + 10);
+			System.out.printf("La moto está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+		}else{
+			throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
+		}
 		
 	}
 

@@ -24,10 +24,22 @@ public class Sedan extends Coche {
 
 	@Override
 	public void acelerar() {
-		// TODO Auto-generated method stub
+		if(getVelocidadInicial() <= 120) {
+			setVelocidadInicial(getVelocidadInicial()  + 10);
+			System.out.printf("El sedan está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+		}else{
+			throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
+		}
 		
 	}
-
+		//toString
+	    @Override
+	    public String toString() {
+			return "Coche [Marca=" + getMarca() + "modelo= " + getModelo() 
+			+ "matricula= " + getMatricula() 
+			+ "Combustible= " + getCombustible() + "puertas = " + this.puertas + "]";
+		}   
+	
 
 		
 	}

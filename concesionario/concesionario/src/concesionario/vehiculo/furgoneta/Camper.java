@@ -6,19 +6,19 @@ public class Camper extends Furgoneta{
 		private TipoFurgoneta tipoFurgoneta;
 		private int numeroCamas;
 		private String color;
-		private double tamaño;
+		private double tamanio;
 		
 	//Constructor
 	public Camper(String marca, String modelo, String matricula, String tipoFurgoneta, String color, int numeroCamas, double tamaño) {
 		super(marca, modelo, matricula, tipoFurgoneta);
 		this.numeroCamas = numeroCamas;
 		this.color = color;
-		this.tamaño = tamaño;
+		this.tamanio = tamanio;
 	}
 
 	//Getters y Setters
 	public TipoFurgoneta getTipoFurgoneta() {
-		return tipoFurgoneta;
+		return this.tipoFurgoneta;
 	}
 
 	public void setTipoFurgoneta(TipoFurgoneta tipoFurgoneta) {
@@ -26,7 +26,7 @@ public class Camper extends Furgoneta{
 	}
 
 	public int getNumeroCamas() {
-		return numeroCamas;
+		return this.numeroCamas;
 	}
 
 	public void setNumeroCamas(int numeroCamas) {
@@ -34,7 +34,7 @@ public class Camper extends Furgoneta{
 	}
 
 	public String getColor() {
-		return color;
+		return this.color;
 	}
 
 	public void setColor(String color) {
@@ -42,17 +42,31 @@ public class Camper extends Furgoneta{
 	}
 
 	public double getTamaño() {
-		return tamaño;
+		return this.tamanio;
 	}
 
 	public void setTamaño(double tamaño) {
-		this.tamaño = tamaño;
+		this.tamanio = tamaño;
 	}
+	
 	
 	@Override
 	public void acelerar() {
-		// TODO Auto-generated method stub
+		if(getVelocidadInicial() <= 120) {
+			setVelocidadInicial(getVelocidadInicial()  + 10);
+			System.out.printf("La camper está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+		}else{
+			throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
+		}
 		
+	}
+	
+	@Override
+    public String toString() {
+		return "Camper [Marca=" + getMarca() + "modelo= " + getModelo() 
+		+ "matricula= " + getMatricula() 
+		+ "Tipo de Furgoneta= " + this.tipoFurgoneta + "numero de camas= " + this.numeroCamas
+		+ "color= " + this.color + "tamaño= " + this.tamanio + "]";
 	}
 	
 }

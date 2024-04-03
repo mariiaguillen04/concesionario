@@ -5,6 +5,8 @@ import concesionario.vehiculo.Vehiculo;
 public class Furgoneta extends Vehiculo {
 	//Atributos
 		private TipoFurgoneta tipoFurgoneta;
+		private boolean cargada = false;
+		private boolean limpiar = false;
 		
 	//Constructor
 	public Furgoneta(String marca, String modelo, String matricula, String tipoFurgoneta ) {
@@ -22,15 +24,10 @@ public class Furgoneta extends Vehiculo {
 		this.tipoFurgoneta = TipoFurgoneta.valueOf(tipoFurgoneta);
 	}
 
-	@Override
-	public void acelerar() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	
 	public void cargarFurgoneta() {
-        boolean cargada = false;
+         cargada = false;
 		if (!cargada) {
             System.out.println("Cargando furgoneta");
            
@@ -41,8 +38,8 @@ public class Furgoneta extends Vehiculo {
         }
     }
 	
-	public void descargarFurgoneta() {
-        boolean cargada = false;
+public void descargarFurgoneta() {
+        
 		if (cargada) {
             System.out.println("Descargando furgoneta");
             
@@ -53,16 +50,29 @@ public class Furgoneta extends Vehiculo {
         }
     }
 	
-	public void limpiarFurgoneta() {
-		boolean limpiar = false;
-		if(limpiar) {
+ 	public void limpiarFurgoneta() {
+		
+		if(!limpiar) {
+			limpiar = true;
 			System.out.println("Limpiando la furgoneta");
         
         	System.out.println("Furgoneta limpia y lista para usar");
 		} else {
-			System.out.println("La furgoneta ya esta lo vastante limpia");
+			System.out.println("La furgoneta ya esta lo bastante limpia");
 		}
 	}
+	
+	@Override
+	public void acelerar() {
+		if(getVelocidadInicial() <= 120) {
+			setVelocidadInicial(getVelocidadInicial()  + 10);
+			System.out.printf("La furgoneta está acelerando, su velocidad es de %d "+ getVelocidadInicial()+ "Km");
+		}else{
+			throw new IllegalArgumentException("Ha alcanzado el límite de velocidad. No puede acelerar más");
+		}
+		
+	}
+	
 	@Override
     public String toString() {
 		return "Coche [Marca=" + getMarca() + "modelo= " + getModelo() 
@@ -70,8 +80,6 @@ public class Furgoneta extends Vehiculo {
 		+ "Tipo de Furgoneta= " + this.tipoFurgoneta + "]";
 	} 
 	
-	 public void mostrarInformacion() {
-			System.out.println(this.toString());
-		}
+	
 }
 

@@ -36,7 +36,7 @@ public class Main {
 			concesionario.aniadirVehiculo(furgoneta); 
 			concesionario.aniadirVehiculo(camper); 
 			
-			sedan.bloqueoPuertas(false);
+			sedan.bloqueoPuertas();
 			ranchera.girarCoche(1);;
 			camion.cargarCamion(2);
 			furgoneta.descargarFurgoneta();
